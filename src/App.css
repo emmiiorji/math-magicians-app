@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  background: #f3f3f3
+}
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+}
+
+#display {
+  height: 50px;
+  background: #858693;
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 18px;
+}
+
+.key {
+  background: #fff;
+  border: none;
+  font-size: 16px;
+}
+
+#zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: fit-content;
+  gap: 3px;
+  width: 350px;
+  height: 250px;
+}
+
+.orange {
+  background: #f5913e;
+}
