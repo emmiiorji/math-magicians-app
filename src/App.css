@@ -13,7 +13,7 @@
   justify-content: center;
   width: 100vw;
   min-height: 100vh;
-  background: #f3f3f3
+  background: #f3f3f3;
 }
 
 #calculator {
@@ -46,7 +46,6 @@
 #keypad {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: fit-content;
   gap: 3px;
   width: 350px;
   height: 250px;
