@@ -4,22 +4,21 @@ import React from 'react';
 class Display extends React.Component {
   constructor(props) {
     super(props);
-    this.className = props.className;
-    this.value = props.value;
+    [this.id, this.value] = [props.id, props.value];
   }
 
   render() {
-    return <div className={this.className}>{this.value}</div>;
+    return <div id={this.id}>{this.value}</div>;
   }
 }
 
 Display.defaultProps = {
-  className: 'display',
+  id: 'display',
   value: 0,
 };
 
 Display.propTypes = {
-  className: PropTypes.string,
+  id: PropTypes.string,
   value: PropTypes.number,
 };
 
