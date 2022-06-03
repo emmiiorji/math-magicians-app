@@ -9,31 +9,40 @@ class Keypad extends React.Component {
   }
 
   render() {
+    const { handleKeyClick } = this.props;
+    const symbols = [
+      { value: 'AC', id: 'AC' }, { value: '+/-', id: 'plus-minus' },
+      { value: '%', id: 'percent' }, { value: '÷', id: 'divide', className: 'key orange' },
+      { value: '7', id: 'seven' }, { value: '8', id: 'eight' },
+      { value: '9', id: 'nine' }, { className: 'key orange', value: 'x', id: 'times' },
+      { value: '4', id: 'four' }, { value: '5', id: 'five' },
+      { value: '6', id: 'six' }, { className: 'key orange', value: '-', id: 'minus' },
+      { value: '1', id: 'one' }, { value: '2', id: 'two' },
+      { value: '3', id: 'three' }, { value: '+', id: 'plus', className: 'key orange' },
+      { value: '0', id: 'zero' }, { value: '.', id: 'dot' }, { value: '=', id: 'equal', className: 'key orange' },
+    ];
     return (
       <div id={this.id}>
-        <Key value="AC" />
-        <Key value="+/-" />
-        <Key value="%" />
-        <Key className="key orange" value="÷" />
-
-        <Key value="7" />
-        <Key value="8" />
-        <Key value="9" />
-        <Key className="key orange" value="x" />
-
-        <Key value="4" />
-        <Key value="5" />
-        <Key value="6" />
-        <Key className="key orange" value="-" />
-
-        <Key value="1" />
-        <Key value="2" />
-        <Key value="3" />
-        <Key className="key orange" value="+" />
-
-        <Key value="0" id="zero" />
-        <Key value="." />
-        <Key className="key orange" value="=" />
+        {symbols.map((symbol) => (
+          symbol.className
+            ? (
+              <Key
+                value={symbol.value}
+                id={symbol.id}
+                key={`${symbol.id}2`}
+                className={symbol.className}
+                handleKeyClick={handleKeyClick}
+              />
+            )
+            : (
+              <Key
+                value={symbol.value}
+                id={symbol.id}
+                key={`${symbol.id}1`}
+                handleKeyClick={handleKeyClick}
+              />
+            )
+        ))}
       </div>
     );
   }
@@ -45,6 +54,7 @@ Keypad.defaultProps = {
 
 Keypad.propTypes = {
   id: PropTypes.string,
+  handleKeyClick: PropTypes.func.isRequired,
 };
 
 export default Keypad;
