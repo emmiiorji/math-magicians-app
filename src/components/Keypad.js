@@ -31,6 +31,7 @@ class Keypad extends React.Component {
                 id={symbol.id}
                 key={`${symbol.id}2`}
                 className={symbol.className}
+                handleKeyClick={handleKeyClick}
               />
             )
             : (
@@ -38,6 +39,7 @@ class Keypad extends React.Component {
                 value={symbol.value}
                 id={symbol.id}
                 key={`${symbol.id}1`}
+                handleKeyClick={handleKeyClick}
               />
             )
         ))}
