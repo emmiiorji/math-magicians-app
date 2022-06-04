@@ -30,8 +30,12 @@ class Calculator extends Component {
 
     return (
       <div id={this.id}>
-        <Display total={total === null ? 0 : total} next={next || ''} operation={operation || ''} />
-        <Keypad handleKeyClick={this.handleKeyClick} />
+        <Display
+          total={total === null ? 0 : total}
+          next={next || ''}
+          operation={operation || ''}
+        />
+        <Keypad handleKeyClick={this.handleKeyClick} id="keypad" />
       </div>
     );
   }
