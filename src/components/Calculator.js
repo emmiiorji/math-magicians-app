@@ -25,6 +25,7 @@ const Calculator = ({ id }) => {
         total={total === null ? 0 : total}
         next={next || ''}
         operation={operation || ''}
+        id="display"
       />
       <Keypad handleKeyClick={handleKeyClick} id="keypad" />
     </div>
