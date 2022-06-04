@@ -1,15 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Display = (
-  {
-    id, total, operation, next,
-  },
-) => (
-  <div id={id}>
-    {`${total} ${operation} ${next}`}
-  </div>
-);
+class Display extends React.Component {
+  constructor(props) {
+    super(props);
+    [this.id, this.total] = [props.id, props.total];
+  }
+
+  render() {
+    const { total, operation, next } = this.props;
+    return (
+      <div id={this.id}>
+        {`${total} ${operation} ${next}`}
+      </div>
+    );
+  }
+}
 
 Display.propTypes = {
   id: PropTypes.string.isRequired,
