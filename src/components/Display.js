@@ -11,7 +11,7 @@ class Display extends React.Component {
     const { total, operation, next } = this.props;
     return (
       <div id={this.id}>
-        {`${total}${operation}${next}`}
+        {`${total} ${operation} ${next}`}
       </div>
     );
   }
