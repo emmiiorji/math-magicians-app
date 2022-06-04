@@ -1,37 +1,29 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-class Key extends React.Component {
-  constructor(props) {
-    super(props);
-    [this.value, this.className, this.id] = [props.value, props.className, props.id];
-    this.handleKeyClick = this.handleKeyClick.bind(this);
-  }
+const Key = ({
+  value, id, onClick, className,
+}) => {
+  const handleKeyClick = (e) => {
+    onClick(e.target.innerText);
+  };
 
-  handleKeyClick(e) {
-    const { handleKeyClick } = this.props;
-    handleKeyClick(e.target.innerText);
-  }
-
-  render() {
-    return (
-      <button type="button" className={this.className} id={this.id} onClick={this.handleKeyClick}>
-        {this.value}
-      </button>
-    );
-  }
-}
-
-Key.defaultProps = {
-  className: 'key',
-  id: '',
+  return (
+    <button type="button" className={className} id={id} onClick={handleKeyClick}>
+      {value}
+    </button>
+  );
 };
+
+// Key.defaultProps = {
+//   className: 'key',
+// };
 
 Key.propTypes = {
   value: PropTypes.string.isRequired,
-  className: PropTypes.string,
-  id: PropTypes.string,
-  handleKeyClick: PropTypes.func.isRequired,
+  className: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Key;
