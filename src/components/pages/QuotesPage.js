@@ -9,10 +9,11 @@ const QuotesPage = () => (
       <div className={styles.quotesContainer}>
         <p className={styles.quote}>
           <span className={styles.quoteText}>
-            Mathematics is about understanding rather than numbers,
-            equations, computations, or methods.
+            Many who have had an opportunity of knowing any more about mathematics confuse it
+            with arithmetic, and consider it an arid science. In reality, however, it is a science
+            which requires a great amount of imagination.
           </span>
-          <p className={styles.authorName}>- William Paul Thurston</p>
+          <p className={styles.authorName}>— Sofia Kovalevskaya</p>
         </p>
       </div>
     </section>
