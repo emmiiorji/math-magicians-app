@@ -1,0 +1,16 @@
+.navs {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.navs li {
+  list-style: none;
+}
+
+.navs a {
+  text-decoration: none;
+  color: #a89e9e;
+  font-size: 20px;
+}

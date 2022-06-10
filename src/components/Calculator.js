@@ -11,7 +11,7 @@ const Calculator = ({ id }) => {
   const handleKeyClick = (buttonName) => {
     setCalcObject((state) => {
       const result = calculate(state, buttonName);
-      return result;
+      return { ...state, ...result };
     });
   };
 

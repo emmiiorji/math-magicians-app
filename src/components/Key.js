@@ -1,23 +1,26 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Key = ({
-  value, id, onClick, className,
-}) => {
-  const handleKeyClick = (e) => {
+class Key extends React.Component {
+  constructor(props) {
+    super(props);
+    [this.value, this.className, this.id] = [props.value, props.className, props.id];
+    this.handleKeyClick = this.handleKeyClick.bind(this);
+  }
+
+  handleKeyClick(e) {
+    const { onClick } = this.props;
     onClick(e.target.innerText);
-  };
+  }
 
-  return (
-    <button type="button" className={className} id={id} onClick={handleKeyClick}>
-      {value}
-    </button>
-  );
-};
-
-// Key.defaultProps = {
-//   className: 'key',
-// };
+  render() {
+    return (
+      <button type="button" className={this.className} id={this.id} onClick={this.handleKeyClick}>
+        {this.value}
+      </button>
+    );
+  }
+}
 
 Key.propTypes = {
   value: PropTypes.string.isRequired,
