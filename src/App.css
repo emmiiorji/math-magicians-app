@@ -77,11 +77,11 @@ body {
 
 @media only screen and (max-width: 728px) {
   #calculator {
+    margin: 0;
     margin-top: 15px;
     width: 100%;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin: 0;
   }
 }
