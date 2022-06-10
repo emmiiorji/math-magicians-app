@@ -6,9 +6,8 @@ const HomePage = () => (
   <>
     <Header />
     <section className={styles.home}>
-      {/* <div className="home"> */}
       <div className={styles.quotesContainer}>
-        <h2>Welcome to the world of mathematics</h2>
+        <h2>Welcome to Math Magicians&#39; Page</h2>
         <p>
           The science of mathematics is concerned with the logic of shape, quantity, and order.
           Math is present in every aspect of our lives. Everything in our everyday
@@ -22,7 +21,6 @@ const HomePage = () => (
           mechanic, a shopkeeper or a doctor, an engineer or a scientist, a musician or a magician.
         </p>
       </div>
-      {/* </div> */}
     </section>
   </>
 );

@@ -7,10 +7,10 @@ const CalculatorPage = () => (
   <main>
     <Header />
     <section className={styles.calcContainer}>
-      <h2>Can we do some math?</h2>
-      <Calculator id="calculato" />
-      {/* <div className={styles.wrapper}>
-      </div> */}
+      <div className={styles.wrapper}>
+        <h2>Can we do some math?</h2>
+        <Calculator id="calculator" />
+      </div>
     </section>
   </main>
 );

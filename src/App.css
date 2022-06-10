@@ -29,6 +29,7 @@ body {
 #display {
   height: 50px;
   background: #858693;
+  width: 350px;
   color: #fff;
   padding: 5px;
   display: flex;
@@ -64,4 +65,24 @@ body {
 .active {
   font-weight: 600;
   border-bottom: 2px solid #f5913e;
+}
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+  background: #f3f3f3;
+  padding: 5% 10%;
+  border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 728px) {
+  #calculator {
+    margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+  }
 }
