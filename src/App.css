@@ -6,19 +6,24 @@
   box-sizing: border-box;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
+body {
   min-height: 100vh;
-  background: #f3f3f3;
+  overflow-x: hidden;
+  background: url(https://res.cloudinary.com/emmii/image/upload/v1654865542/general/calculator_background_wvg0al.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: #00182c;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#calculator {
-  display: flex;
-  flex-direction: column;
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 #display {
@@ -30,6 +35,7 @@
   align-items: center;
   justify-content: flex-end;
   font-size: 18px;
+  margin-top: 10px;
 }
 
 .key {
@@ -53,4 +59,9 @@
 
 .orange {
   background: #f5913e;
+}
+
+.active {
+  font-weight: 600;
+  border-bottom: 2px solid #f5913e;
 }
