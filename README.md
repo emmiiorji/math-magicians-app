@@ -10,9 +10,9 @@ This is a Single Page App (SPA) developed with [React](https://reactjs.org/). It
 - CSS
 - React
 
-<!-- ## Live Demo
+## Live Demo
 
-[Live Demo Link](https://emmiiorji.github.io/math-magicians-app/) -->
+[Live Demo Link](https://world-math-magicians.herokuapp.com/)
 
 
 ## Getting Started
