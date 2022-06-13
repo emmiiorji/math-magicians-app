@@ -12,7 +12,7 @@ This is a Single Page App (SPA) developed with [React](https://reactjs.org/). It
 
 ## Live Demo
 
-[Live Demo Link](https://world-math-magicians.herokuapp.com/)
+Live demo on [Heroku](https://world-math-magicians.herokuapp.com/) and on [Netlify](https://world-math-magicians.netlify.app/)
 
 
 ## Getting Started
