@@ -4,6 +4,11 @@
 
 This is a Single Page App (SPA) developed with [React](https://reactjs.org/). It that allows users to make simple calculations and read a random math-related quote.
 
+Here's a sample screenshot of the application:
+
+![image](https://user-images.githubusercontent.com/20554583/173353068-5c6c3c1e-a367-4487-b6c0-fd2c3114cbed.png)
+
+
 ## Built With
 
 - HTML
